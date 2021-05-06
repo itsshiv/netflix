@@ -1,0 +1,148 @@
+*{
+	font-family: 'Bebas Neue', cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}		
+
+body{
+	min-height: 100vh;
+	background:#111;
+}	
+header{
+	width: 100%;
+	min-height: 80px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	background:#111;
+	position: relative;  
+}	
+.logo {
+	font-size: 2em;
+	margin-left: 100px;
+}
+.logo h2{
+	letter-spacing: 2px;
+}
+.logo a{
+	text-decoration:none;
+	color: red;
+}
+.logo a:hover{
+	color:white ;
+}
+ul{ 
+	flex: 2;
+	text-align:right;
+	margin-right: 50px: 
+	} 
+ul li{
+	list-style: none;
+	display: inline-block;
+}	
+ul li a{
+	color: whitesmoke;
+	text-decoration:none;
+	padding: 10px 15px;
+	font-size: 1.5rem; 
+}
+ul li a:hover{
+	color: red;
+}
+.search{
+	max-width: 250px;
+	width:100%;
+	border: none;
+	outline:none;
+	padding: 0 10px;  
+}
+.search button{
+	width: 45px;
+	height: 100%;
+	border: none;
+	outline:none;
+	background-color: white;
+
+}
+.menu-close{
+	color: white;
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	font-size: 2em;
+	display: none;
+}
+.menu-open{
+	color: white;
+	position: absolute;
+	top: 15px;
+	left:5px;
+	transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 2em;
+	display: none;
+}
+#chk1:checked ~ ul{
+	left:0;
+}
+#chk1{
+	display: none;
+}
+.container{
+	display: flex; flex-wrap: wrap;padding: 5px; justify-content: space-between;
+}
+
+.UL {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.LI {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  display: block;
+
+
+}
+@media (max-aspect-ratio: 1/1) {
+  .LI {
+    height: 30vh;
+  }
+}
+
+// Short screens
+
+@media (max-height: 480px) {
+  .LI {
+    height: 80vh;
+  }
+}
+
+// Smaller screens in portrait
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .UL {
+    flex-direction: row;
+  }
+
+  .LI {
+    height: auto;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+
